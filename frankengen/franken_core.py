@@ -126,7 +126,7 @@ def generate(certificates, ca_cert, ca_key, fconfig, count=1, \
                          max_extensions, extensions, fconfig["flip_critical_prob"], \
                           fconfig["ext_mod_prob"], fconfig["invalid_ts_prob"], \
                         fconfig["hash_for_sign"], fconfig["randomize_serial"])
-            signing_key = key
+            # signing_key = key
             issuer = cert.get_subject()
             chain.append(cert)
         certs.append((key,list(reversed(chain))))
